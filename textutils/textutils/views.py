@@ -1,9 +1,10 @@
 # I have created this file - Manisha
 from django.http import  HttpResponse
+from django.shortcuts import render
 
 # views here
 def index(request):
-    return HttpResponse("This is Home Page")
+    return render(request, 'index.html')
 
 def removepunc(request):
     return HttpResponse("removepunc")
