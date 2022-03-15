@@ -39,11 +39,16 @@ def analyze(request):
             "purpose": "CONVERT TO UPPER CASE", 'analyzed_text': analyzed
         }
         return render(request, 'analyze.html', params)
-    elif newlineremover == "on":
-        analyzed = reqText
-        params = {
-            "purpose": "New Line Remover - TextUtils", 'analyzed_text': analyzed
-        }
+
+    elif (newlineremover == "on"):
+        analyzed = ""
+        for char in reqText:
+            if char != "\n" and char != "\r":
+                analyzed = analyzed + char
+            else:
+                print("no")
+        params = {'purpose': 'Removed NewLines', 'analyzed_text': analyzed}
+        # Analyze the text
         return render(request, 'analyze.html', params)
     elif lowercase == "on":
         analyzed = reqText.lower()
