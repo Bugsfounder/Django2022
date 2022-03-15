@@ -38,7 +38,8 @@
 
 <h1 class="text-center mb-2">Welcome To The Text Analyzer - TextUtils</h1>
 
-<form action="/analyze" method="get">
+<form action="/analyze/" method="post">
+    {% csrf_token %}
     <div class="container">
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Enter Your Text Here And Let Textutils Do The

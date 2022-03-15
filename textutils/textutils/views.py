@@ -10,16 +10,16 @@ def index(request):
 
 def analyze(request):
     # GET THE TEXT FROM GET REQUEST PARAMS
-    reqText = request.GET.get('text', 'default')
+    reqText = request.POST.get('text', 'default')
 
     # CHECK BOX VALUES
-    removepunc = request.GET.get('removepunc', 'off')
-    uppercase = request.GET.get('uppercase', 'off')
-    newlineremover = request.GET.get('newlineremover', 'off')
-    lowercase = request.GET.get('lowercase', 'off')
-    spaceremover = request.GET.get('spaceremover', 'off')
-    charactercounter = request.GET.get('charactercounter', 'off')
-    charactercounterwithspaces = request.GET.get('charactercounterwithspaces', 'off')
+    removepunc = request.POST.get('removepunc', 'off')
+    uppercase = request.POST.get('uppercase', 'off')
+    newlineremover = request.POST.get('newlineremover', 'off')
+    lowercase = request.POST.get('lowercase', 'off')
+    spaceremover = request.POST.get('spaceremover', 'off')
+    charactercounter = request.POST.get('charactercounter', 'off')
+    charactercounterwithspaces = request.POST.get('charactercounterwithspaces', 'off')
 
     # IF CHECK WHICH CHECKBOX IS ON
     if removepunc == "on":
