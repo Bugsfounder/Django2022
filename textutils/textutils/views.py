@@ -66,13 +66,13 @@ def analyze(request):
             if char != " ":
                 analyzed += 1
         params = {
-            "purpose": "Space Remover - TextUtils", 'analyzed_text': analyzed
+            "purpose": "Character Count Without spaces - TextUtils", 'analyzed_text': analyzed
         }
         return render(request, 'analyze.html', params)
     elif charactercounterwithspaces == "on":
         analyzed = len(reqText)
         params = {
-            "purpose": "Space Remover - TextUtils", 'analyzed_text': analyzed
+            "purpose": "Character Count With spaces - TextUtils", 'analyzed_text': analyzed
         }
         return render(request, 'analyze.html', params)
     return HttpResponse("Select the checkbox to see some actions with your text")
