@@ -20,10 +20,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
-    path('removepunc/', views.removepunc, name="removepunc"),
-    path('capitalizefirst/', views.capitalizefirst, name="capitalizefirst"),
-    path('newlineremove/', views.newlineremove, name="newlineremove"),
-    path('spaceremove/', views.spaceremove, name="spaceremove"),
-    path('charactercounte/', views.charactercounte, name="charactercounte"),
-    path('titlecase/', views.titlecase, name="titlecase"),
+    path('analyze/', views.analyze, name="analyze"),
 ]
