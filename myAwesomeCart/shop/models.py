@@ -12,7 +12,7 @@ class Product(models.Model):
     subcategory = models.CharField(max_length=50, default="")
     image = models.ImageField(upload_to="shop/images", default="")
     pub_date = models.DateTimeField()
-    
+     
     
     def __str__(self) -> str:
         return self.product_name
