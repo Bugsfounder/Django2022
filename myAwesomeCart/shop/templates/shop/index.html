@@ -41,7 +41,7 @@
 {% endblock css %}
 
 {% block body %}
-<div class="container">
+<div class="container"> 
 
   {% for product, range, nSlides  in allProds %}
 
@@ -87,9 +87,6 @@
       {% endif %}
       {% endfor %}
   </div>
-
-
-
 </div>
 </div>
   <!-- left and right controls for the slide -->
@@ -100,8 +97,13 @@
       <span class="carousel-control-next-icon"></span>
   </a>
 
-
   {% endfor %}
 
 </div>
 {% endblock body %}
+
+{% block js %}
+<script>
+
+</script>
+{% endblock js %}
